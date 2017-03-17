@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="liste-article">
+
+	{%block errmessage%}
+	{%endblock%}
+
+	{% for article in articles %}
+	<div class="article-complet">
+
+		<h1 class="titre">
+			<a href="/article/{{article.identifiant}}">
+				{{article.titre}}
+			</a>
+		</h1>
+
+		<div class="bloc-auteur">
+
+			<span class="identifiant">
+				{{article.identifiant}}
+			</span>	
+			par 
+			<span class="auteur">{{article.auteur}}</span>
+			le
+			<span class="date-publication">
+				 {{article.date_publication}}
+			</span>
+
+		</div>
+
+		<p class="paragraphe">
+			{{article.paragraphe}}
+		</p>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}
+

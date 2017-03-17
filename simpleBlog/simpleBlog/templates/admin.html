@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="liste-article">
+	{% for article in articles %}
+	<form method="GET" action="/edit/{{article.id}}">
+		<div class="article-ligne">
+			<span class="titre">
+				{{article.titre}}
+			</span>
+			par
+			<span class="auteur">
+				{{article.auteur}}
+			</span>
+			<span>
+				<input class="edit-btn" type="submit" title="modifier" value="">
+			</span>
+		</div>
+	</form>
+	{% endfor %}
+</div>
+{% endblock %}

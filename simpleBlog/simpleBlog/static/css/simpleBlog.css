@@ -1,0 +1,149 @@
+/* Reset */
+@import url("https://fonts.googleapis.com/css?family=Cutive+Mono|Roboto+Mono:500");
+body {
+  word-break: break-all; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer; }
+
+ul, li {
+  list-style-type: none; }
+
+h1, h2, h3, h4, h5, h6, p, span {
+  margin: 0;
+  padding: 0; }
+
+input[type=text]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0; }
+
+input[type=text]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0; }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none; }
+
+input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
+input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover {
+  border: 1px solid #0f0; }
+
+/* Nav */
+.nav {
+  position: fixed;
+  right: 0;
+  margin-right: 2vw; }
+  .nav .nav_item {
+    text-align: right;
+    margin: 0.2vh 1.8vw 0.2vh 0vw;
+    padding: 0.2vh 0; }
+    .nav .nav_item input[type=search] {
+      width: 60%;
+      text-align: right;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font: inherit;
+      text-indent: 0.2vw; }
+      .nav .nav_item input[type=search]:focus {
+        outline: none; }
+
+.error-msg {
+  color: red; }
+
+/* ARTICLE */
+.liste-article {
+  width: calc(62.5%);
+  float: left;
+  margin-left: 0px;
+  margin-left: calc(4.16667% + 0px); }
+  .liste-article .invalidites {
+    width: 100%; }
+
+.article-complet, .article-edit {
+  margin: 7.25754vmin 0; }
+  .article-complet:nth-child(1), .article-edit:nth-child(1) {
+    margin-top: 0; }
+  .article-complet .bloc-auteur, .article-edit .bloc-auteur {
+    margin-top: 2.77225vmin; }
+  .article-complet .paragraphe, .article-edit .paragraphe {
+    margin-top: 1.71338vmin;
+    width: 100%; }
+
+.article-edit .titre, .article-edit .auteur, .article-edit .identifiant, .article-edit .date-publication, .article-edit .paragraphe, .article-edit input {
+  border: none;
+  width: 100%;
+  word-break: break-word; }
+  .article-edit .titre:focus, .article-edit .auteur:focus, .article-edit .identifiant:focus, .article-edit .date-publication:focus, .article-edit .paragraphe:focus, .article-edit input:focus {
+    border: none;
+    outline: none; }
+  .article-edit .titre:hover, .article-edit .auteur:hover, .article-edit .identifiant:hover, .article-edit .date-publication:hover, .article-edit .paragraphe:hover, .article-edit input:hover {
+    border: none;
+    outline: none; }
+.article-edit .date-publication {
+  width: auto; }
+.article-edit .paragraphe {
+  min-height: 20vh; }
+.article-edit .publish-btn {
+  margin-top: 1.71338vmin;
+  float: right;
+  background: url(../vectors/publish.svg) no-repeat; }
+
+.article-ligne {
+  margin-top: 1.05895vmin; }
+  .article-ligne .edit-btn {
+    background: url(../vectors/edit.svg); }
+  .article-ligne .read-btn {
+    display: inline-block;
+    background: url(../vectors/read.svg); }
+
+/* TYPOGRAPHY */
+.article-complet .titre, .article-edit .titre, .article-complet .identifiant, .article-edit .identifiant, .article-ligne .titre, .article-ligne .auteur, .article-ligne .date-publication, .article-complet .auteur, .article-edit .auteur, .article-complet .date-publication, .article-edit .date-publication, .liste-article .invalidites {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500; }
+
+nav, .article-complet .bloc-auteur, .article-edit .bloc-auteur, .article-ligne, .error-msg, .article-complet .paragraphe, .article-edit .paragraphe {
+  font-family: 'Cutive Mono', monospace;
+  font-weight: 400; }
+
+.article-complet .identifiant, .article-edit .identifiant, .article-complet .auteur, .article-edit .auteur, .article-complet .date-publication, .article-edit .date-publication, .article-ligne .titre, .article-ligne .auteur, .article-ligne .date-publication {
+  text-transform: uppercase; }
+
+.article-edit .auteur, .article-edit .identifiant {
+  text-transform: none; }
+
+nav, .article-complet .bloc-auteur, .article-edit .bloc-auteur, .article-ligne, .article-complet .identifiant, .article-edit .identifiant, .article-ligne .titre, .article-ligne .auteur, .article-ligne .date-publication, .article-complet .auteur, .article-edit .auteur, .article-complet .date-publication, .article-edit .date-publication, .liste-article .invalidites, .error-msg, .article-complet .paragraphe, .article-edit .paragraphe {
+  font-size: 2.77225vmin;
+  line-height: 2.77225vmin; }
+
+.article-complet .titre, .article-edit .titre {
+  font-size: 7.25754vmin;
+  line-height: 7.25754vmin; }
+
+.liste-article .invalidites {
+  color: #c65151; }
+
+.article-edit .publish-btn, .article-ligne .edit-btn, .article-ligne .read-btn {
+  min-height: 2.77225vmin;
+  min-width: 2.77225vmin;
+  cursor: pointer;
+  border: none; }
+
+/*@author:eliastouil*/
+.body {
+  width: calc(100%);
+  float: left;
+  margin-left: 0px;
+  padding-top: 0.65448vmin; }
+  .body::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+/*# sourceMappingURL=simpleBlog.css.map */

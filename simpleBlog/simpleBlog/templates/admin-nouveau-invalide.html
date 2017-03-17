@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block body %}
+	<form method="POST" action="/admin-nouveau">
+		<div class="liste-article">
+			<div class="article-complet article-edit">
+				<input type="text" name="titre" class="titre" value="{{article.titre}}" placeholder="Titre"></input>
+
+				<input type="text" name="identifiant" value="{{article.identifiant}}" class="identifiant" placeholder="identifiant"></input>
+
+				<input type="text" name="auteur" value="{{article.auteur}}" class="auteur" placeholder="auteur"></input>
+
+				<textarea type="text" class="paragraphe" name="paragraphe" placeholder="Paragraphe" value="{{article.paragraphe}}"></textarea>
+				
+				<input type="date" name="date_publication" class="date-input date-publication" value="{{article.date_publication}}"></input>
+				
+				<div class="invalidites">
+					<div>
+						{% for i in invalidites%}
+							<li>{{i}}</li>
+						{% endfor %}
+					</div>
+				</div>
+
+				<input class="publish-btn" type="submit" title="save" value="">
+			</div>
+		</div>
+	</form>
+{% endblock %}

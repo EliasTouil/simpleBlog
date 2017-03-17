@@ -1,0 +1,31 @@
+/* Nav */
+.nav {
+    position: fixed;
+    right: 0;
+    margin-right: 2vw;
+
+    .nav_item {
+        text-align: right;
+        margin: 0.2vh 1.8vw 0.2vh 0vw;
+        padding: 0.2vh 0;
+
+        input[type=search] {
+            width: 60%;
+            text-align: right;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font: inherit;
+            text-indent: 0.2vw;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+.error-msg {
+    @extend %paragraphe-font;
+
+    color: red;
+}

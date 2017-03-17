@@ -1,0 +1,52 @@
+/* Reset */
+// preferences pour bourbon et neat
+$neat-grid: (columns: 24, gutter: 0px);
+
+$modular-scale-ratio: $golden;
+$modular-scale-base: 0.25vmin;
+
+//Reinitialisation de proprietes touchees par le fureteur
+body {
+    word-break: break-all;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+    margin: 0;
+    padding: 0;
+}
+
+//enleve le "x" de Chrome et IE des champs
+input[type=text]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=text]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+//Enleve les bordure stylees des champs
+#{$all-text-inputs-focus},
+#{$all-text-inputs-hover} {
+    border: 1px solid #0f0;
+}

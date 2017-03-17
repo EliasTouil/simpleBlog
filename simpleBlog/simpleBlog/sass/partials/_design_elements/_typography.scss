@@ -1,0 +1,93 @@
+/* TYPOGRAPHY */
+@import url("https://fonts.googleapis.com/css?family=Cutive+Mono|Roboto+Mono:500");
+
+// Bases
+%roboto {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+}
+
+%cultive {
+    font-family: 'Cutive Mono', monospace;
+    font-weight: 400;
+}
+
+%uppercase-font {
+    text-transform: uppercase;
+}
+
+%lowercase-font {
+    text-transform: lowercase;
+}
+
+%allcase-font {
+    text-transform: none;
+}
+
+// Tailles
+%small-font {
+    font-size: modular-scale(5);
+    line-height: modular-scale(5);
+}
+
+%medium-font {
+    font-size: modular-scale(7);
+    line-height: modular-scale(7);
+}
+
+// Elements visuel
+%nav-font {
+    @extend %cultive;
+
+    @extend %small-font;
+}
+
+%titre-font {
+    @extend %roboto;
+
+    @extend %medium-font;
+}
+
+%bloc-auteur-font {
+    @extend %cultive;
+
+    @extend %small-font;
+}
+
+%identifiant-font {
+    @extend %roboto;
+
+    @extend %small-font;
+}
+
+%auteur-font {
+    @extend %identifiant-font;
+}
+
+%date-font {
+    @extend %identifiant-font;
+}
+
+%paragraphe-font {
+    @extend %cultive;
+
+    @extend %small-font;
+}
+
+nav {
+    @extend %nav-font;
+}
+
+%invalidites-font {
+    @extend %identifiant-font;
+
+    color: #c65151;// rouge fonce
+}
+
+// Style du bouton qui doit etre harmonise avec les typos.
+%btn {
+    min-height: modular-scale(5);
+    min-width: modular-scale(5);
+    cursor: pointer;
+    border: none;
+}

@@ -1,0 +1,122 @@
+/* ARTICLE */
+.liste-article {
+    @include grid-column(15);
+    @include grid-push(1);
+
+    .invalidites {
+        width: 100%;
+
+        @extend %invalidites-font;
+    }
+}
+
+.article-complet {
+    margin: modular-scale(7) 0;
+
+    &:nth-child(1) {
+        margin-top: 0;
+    }
+
+    .titre {
+        @extend %titre-font;
+    }
+
+    .bloc-auteur {
+        @extend %bloc-auteur-font;
+
+        margin-top: modular-scale(5);
+    }
+
+    .identifiant {
+        @extend %identifiant-font;
+
+        @extend %uppercase-font;
+    }
+
+    .auteur {
+        @extend %auteur-font;
+
+        @extend %uppercase-font;
+    }
+
+    .date-publication {
+        @extend %date-font;
+
+        @extend %uppercase-font;
+    }
+
+    .paragraphe {
+        margin-top: modular-scale(4);
+        width: 100%;
+
+        @extend %paragraphe-font;
+    }
+}
+
+.article-edit {
+    .titre, .auteur, .identifiant, .date-publication, .paragraphe, input {
+        border: none;
+        width: 100%;
+        word-break: break-word;
+
+        &:focus {
+            border: none;
+            outline: none;
+        }
+
+        &:hover {
+            border: none;
+            outline: none;
+        }
+    }
+
+    .date-publication {
+        width: auto;
+    }
+
+    .auteur, .identifiant {
+        @extend %allcase-font;
+    }
+
+    .paragraphe {
+        min-height: 20vh;
+    }
+
+    .publish-btn {
+        @extend %btn;
+
+        margin-top: modular-scale(4);
+        float: right;
+        background: url(../vectors/publish.svg) no-repeat;
+    }
+}
+
+.article-ligne {
+    @extend %bloc-auteur-font;
+
+    margin-top: modular-scale(3);
+
+    .titre, .auteur, .date-publication {
+        @extend %identifiant-font;
+
+        @extend %uppercase-font;
+    }
+
+    .edit-btn {
+        @extend %btn;
+
+        background: url(../vectors/edit.svg);
+    }
+
+    .read-btn {
+        display: inline-block;
+
+        @extend %btn;
+
+        background: url(../vectors/read.svg);
+    }
+}
+
+.article-edit {
+    @extend .article-complet;
+}

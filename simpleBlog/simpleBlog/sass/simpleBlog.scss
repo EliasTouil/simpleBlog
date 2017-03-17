@@ -1,0 +1,8 @@
+@import "partials/main";
+/*@author:eliastouil*/
+.body {
+    @include grid-container;
+    @include grid-column(24);
+
+    padding-top: modular-scale(2);
+}

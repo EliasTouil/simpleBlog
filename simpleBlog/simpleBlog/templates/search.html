@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block body %}
+	<div class="liste-article">
+		{% for article in articles %}
+
+			<div class="article-ligne">
+
+				<span class="titre">
+					{{article.titre}}
+				</span>
+
+				<span class="date-publication">	
+					{{article.date_publication}}
+				</span>
+
+				<a  href="/article/{{article.identifiant}}">
+					<div class="read-btn" title="lire"></div>
+				</a>
+				
+			</div>
+			
+		{% endfor %}
+	</div>
+{% endblock %}

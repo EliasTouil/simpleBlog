@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form method="POST" action="/edit">
+	<div class="liste-article">
+		<div class="article-complet article-edit">
+
+			<input type="hidden" name="id" value="	{{article.id}}"></input>
+
+			<input type="text" name="titre" class="titre" value="{{article.titre}}"></input>
+
+			<input type="text" name="paragraphe" class="paragraphe" value="{{article.paragraphe}}"></input>
+
+			<input class="publish-btn" type="submit" title="save" value=""></input>
+			
+		</div>
+	</div>
+</form>
+{% endblock %}
+
